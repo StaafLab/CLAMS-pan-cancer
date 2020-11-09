@@ -1,0 +1,150 @@
+##########################
+#
+# CONFIG FILE containing
+# paths to data sets, column names, etc
+# 
+##########################
+
+data_directory_path: "data/"
+result_dir_path: "results/"
+
+functions_path: 'src/functions.R'
+
+
+# GOBO  -----
+gobo:
+  dataset_name: "GOBO"
+  cancer_type: "BRCA"
+  gene_table:
+    file: "GOBO/hgu133a_fData.RData"
+    reporter_col: "reporterId"
+    symbol_col: "geneSymbol"
+    entrez_col: "entrezId"
+  gex_matrix:
+    file: "GOBO/Superset_data_U133_na30_AffymetrixProbe.RData"
+  patient_annotation:
+    file: "GOBO/Superset_annotations_U133A_na30.RData"
+    sample_col: "SampleID"
+    os_event_col: "OSbin"
+    os_time_col: "OS"
+    os_time_type: "years"
+    pam50_col: "PAM50"
+  clams_results: "gobo_clams.csv"
+
+
+# SCAN-B  -----
+scanb:
+  dataset_name: "SCAN-B"
+  cancer_type: "BRCA"
+  gene_table:
+    file: "SCAN_B/genematrix_data_NMrefSeq_fData.RData"
+    reporter_col: "reporterId"
+    symbol_col: "geneSymbol"
+  gex_matrix:
+    file: "SCAN_B/genematrix_data_NMrefSeq.RData"
+  patient_annotation:
+    file: "SCAN_B/FUv7_RNAseq_SCANB_data.RData"
+    sample_col: "rba"
+    os_event_col: "OSbin"
+    os_time_col: "OS"
+    os_time_type: "years"
+  clams_results: "scanb_clams.csv"
+
+
+# TCGA  -----
+tcga:
+  dataset_name: "TCGA"
+  cancer_type: "multiple"
+  rds:
+    file: "TCGA/es_pancan_all_TP.rds"
+  gene_table:
+    ensembl_col: "ENSG"
+    symbol_col: "SYMBOL"
+    entrez_col: "ENTREZID"
+  patient_annotation:
+    sample_col: "sample_id"
+    os_event_col: "OS"
+    os_time_col: "OS.time"
+    os_time_type: "days"
+  clams_results: "tcga_clams.csv"
+
+
+# Data sets for treatment prediction
+# Tabchy et al  -----
+gse20271:
+  dataset_name: "GSE20271"
+  cancer_type: "BRCA"
+  gene_table:
+    file: "treatment_prediction/GSE20271/fData.RData"
+    reporter_col: "reporterId"
+    symbol_col: "geneSymbol"
+    entrez_col: "ENTREZ_GENE_ID"
+  gex_matrix:
+    file: "treatment_prediction/GSE20271/GSE20271_bgGEX.RData"
+  patient_annotation:
+    file: "treatment_prediction/GSE20271/GSE20271_Annotations.txt"
+  clams_results: "gse20271_clams.csv"
+
+
+# Iwamoto et al  -----
+gse22093:
+  dataset_name: "GSE22093"
+  cancer_type: "BRCA"
+  gene_table:
+    file: "treatment_prediction/GSE22093/fData.RData"
+    reporter_col: "reporterId"
+    symbol_col: "geneSymbol"
+    entrez_col: "ENTREZ_GENE_ID"
+  gex_matrix:
+    file: "treatment_prediction/GSE22093/GSE22093_bgGEX.RData"
+  patient_annotation:
+    file: "treatment_prediction/GSE22093/GSE22093_Annotations.txt"
+  clams_results: "gse22093_clams.csv"
+
+
+# Hess et al  -----
+hess:
+  dataset_name: "Hess"
+  cancer_type: "BRCA"
+  gex_matrix:
+    file: "treatment_prediction/Hess/Combined_geneMerged_Affymetrix_data_Hess_dChip.txt"
+    reporter_col: "reporterId"
+    symbol_col: "geneSymbol"
+    entrez_col: "entrezId"
+  patient_annotation:
+    file: "treatment_prediction/Hess/Hess_annotations.txt"
+  clams_results: "hess_clams.csv"
+
+
+# Riaz et al  -----
+bms038:
+  dataset_name: "BMS038"
+  cancer_type: "Melanoma"
+  gex_matrix:
+    file: "treatment_prediction/Melanoma ICI/CountData.BMS038.txt"
+  patient_annotation:
+    file1: "treatment_prediction/Melanoma ICI/Clinical_files_for_mel_treatment_datasets_Johan/bms038_clinical_data_Riaz.txt"
+    file2: "treatment_prediction/Melanoma ICI/Clinical_files_for_mel_treatment_datasets_Johan/Clinical_file_Riaz_mut.csv"
+  clams_results: "bms038_clams.csv"
+
+
+# Liu et al  -----
+schadendorf:
+  dataset_name: "Schadendorf"
+  cancer_type: "Melanoma"
+  gex_matrix:
+    file: "treatment_prediction/Melanoma ICI/Schadendorf_SuppData2.txt"
+  patient_annotation:
+    file: "treatment_prediction/Melanoma ICI/Clinical_files_for_mel_treatment_datasets_Johan/Schadendorf_SuppTable1.txt"
+  clams_results: "schadendorf_clams.csv"
+
+
+# Gide et al  -----
+gide:
+  dataset_name: "Gide"
+  cancer_type: "Melanoma"
+  gex_matrix:
+    file: "treatment_prediction/Melanoma ICI/Raw_genes.txt"
+  patient_annotation:
+    file: "treatment_prediction/Melanoma ICI/Clinical_files_for_mel_treatment_datasets_Johan/Gide_Annotations.txt"
+  clams_results: "gide_clams.csv"
