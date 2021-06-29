@@ -1,5 +1,6 @@
 # CLAMS-pan-cancer
-R code used for analysis and generating figures of article '**Pan-cancer application of a lung-adenocarcinoma-derived gene-expression-based prognostic predictor**' by **Nacer et al.**
+R code used for analysis and generating figures of article '**Pan-cancer application of a lung-adenocarcinoma-derived gene-expression-based prognostic predictor**' by Nacer et al. 2021 in Briefings in Bioinformatics.
+Link to article: https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbab154/6272790
 
 
 ### License
